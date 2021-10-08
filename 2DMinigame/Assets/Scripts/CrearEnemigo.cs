@@ -5,10 +5,10 @@ using UnityEngine;
 public class CrearEnemigo : MonoBehaviour
 {
     [SerializeField] GameObject enemigo;
+
+    [SerializeField] Transform puntoInstanciar;
     [SerializeField] float tiempoSpawn;
     float tiempoMaximo;
-    [SerializeField] Transform[] puntosInstanciar;
-
 
     void Update()
     {
@@ -23,8 +23,7 @@ public class CrearEnemigo : MonoBehaviour
 
     void Crear()
     {
-        int valor = Random.Range(0, 2);
-        Instantiate(enemigo, puntosInstanciar[valor].position, transform.rotation);
+        Instantiate(enemigo, puntoInstanciar.position, transform.rotation);
     }
 
 }

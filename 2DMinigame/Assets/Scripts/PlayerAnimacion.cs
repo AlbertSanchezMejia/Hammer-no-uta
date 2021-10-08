@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimacion : MonoBehaviour
 {
     Animator animador;
+    [SerializeField] AudioSource sonido;
 
     void Start()
     {
@@ -13,9 +14,10 @@ public class PlayerAnimacion : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) & animador.GetCurrentAnimatorStateInfo(0).IsName("Iddle"))
+        if (Input.GetMouseButtonDown(0) & animador.GetCurrentAnimatorStateInfo(0).IsName("Iddle") && Time.timeScale == 1)
         {
             animador.Play("AnimacionAtaque");
+            sonido.Play();
         }
     }
 
