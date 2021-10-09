@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 40
-  deathParticles: {fileID: 4080208819270167535, guid: 17fbf6a63ebea6043979053c9221cff2,
+  particulasDeMuerte: {fileID: 4080208819270167535, guid: 17fbf6a63ebea6043979053c9221cff2,
     type: 3}
 --- !u!50 &4337940783113356307
 Rigidbody2D:
