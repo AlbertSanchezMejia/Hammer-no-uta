@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef82511ee82ef046a7e7d2ada35373c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 35
+  velocidadMovimiento: 40
   deathParticles: {fileID: 4080208819270167535, guid: 17fbf6a63ebea6043979053c9221cff2,
     type: 3}
 --- !u!50 &4337940783113356307

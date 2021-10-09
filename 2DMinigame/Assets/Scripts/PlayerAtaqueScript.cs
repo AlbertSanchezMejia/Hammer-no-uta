@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class PlayerAtaqueScript : MonoBehaviour
 {
-    ShakeScreen sacudir;
+    SacudirPantalla sacudir;
+    PuntajeScript agregarPuntaje;
+
     [SerializeField] AudioSource sonido;
 
     void Start()
     {
-        sacudir = FindObjectOfType<ShakeScreen>();
+        sacudir = FindObjectOfType<SacudirPantalla>();
+        agregarPuntaje = FindObjectOfType<PuntajeScript>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Enemigo"))
         {
-            sacudir.TriggerShake();
+            sacudir.EmpezarSacudirPantalla();
             sonido.Play();
+            agregarPuntaje.AumentarPuntaje();
         }
     }
 

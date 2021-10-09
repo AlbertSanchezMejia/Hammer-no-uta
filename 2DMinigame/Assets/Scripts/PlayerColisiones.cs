@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PlayerColisiones : MonoBehaviour
 {
-    [SerializeField] GameObject loseImage;
+    PerderYReiniciar perderYreiniciar;
+
+    void Start()
+    {
+        perderYreiniciar = FindObjectOfType<PerderYReiniciar>();
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Enemigo"))
         {
-            loseImage.SetActive(true);
-            Time.timeScale = 0;
+            perderYreiniciar.Perder();
         }
     }
 
