@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4337940783113356304}
   - component: {fileID: 4337940783113356306}
   - component: {fileID: 4337940783113356300}
+  - component: {fileID: -8301026371915730900}
   - component: {fileID: 4337940783113356307}
   m_Layer: 0
   m_Name: Enemigo
@@ -73,6 +74,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 40
+--- !u!114 &-8301026371915730900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337940783113356301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba90b8e4692a8f54db71ffb4b9a53df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   particulasDeMuerte: {fileID: 4080208819270167535, guid: 17fbf6a63ebea6043979053c9221cff2,
     type: 3}
 --- !u!50 &4337940783113356307

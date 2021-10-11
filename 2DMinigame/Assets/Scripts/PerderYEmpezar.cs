@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PerderYReiniciar : MonoBehaviour
+public class PerderYEmpezar : MonoBehaviour
 {
     public static bool primeraPartida = false;
 
-    [SerializeField] GameObject imagenInicioPartida;
+    [SerializeField] GameObject imagenPrimeraPartida;
     [SerializeField] GameObject imagenPerder;
 
     void Start()
     {
         Time.timeScale = primeraPartida ? 1 : 0;
-        imagenInicioPartida.SetActive(!primeraPartida);
+        imagenPrimeraPartida.SetActive(!primeraPartida);
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class PerderYReiniciar : MonoBehaviour
 
     void EmpezarPartida()
     {
-        imagenInicioPartida.SetActive(false);
+        imagenPrimeraPartida.SetActive(false);
         Time.timeScale = 1;
         primeraPartida = true;
     }

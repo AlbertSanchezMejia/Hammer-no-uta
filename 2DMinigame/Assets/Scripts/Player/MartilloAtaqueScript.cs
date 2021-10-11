@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAtaqueScript : MonoBehaviour
+public class MartilloAtaqueScript : MonoBehaviour
 {
     SacudirPantalla sacudir;
     PuntajeScript agregarPuntaje;
 
-    [SerializeField] AudioSource sonido;
+    [SerializeField] AudioSource sfxGolpe;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class PlayerAtaqueScript : MonoBehaviour
         if (col.gameObject.CompareTag("Enemigo"))
         {
             sacudir.EmpezarSacudirPantalla();
-            sonido.Play();
+            sfxGolpe.Play();
             agregarPuntaje.AumentarPuntaje();
         }
     }
