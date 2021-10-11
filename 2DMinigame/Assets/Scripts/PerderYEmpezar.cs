@@ -7,13 +7,15 @@ public class PerderYEmpezar : MonoBehaviour
 {
     public static bool primeraPartida = false;
 
+    [SerializeField] InstanciarEnemigo insE;
     [SerializeField] GameObject imagenPrimeraPartida;
     [SerializeField] GameObject imagenPerder;
 
     void Start()
     {
-        Time.timeScale = primeraPartida ? 1 : 0;
+        Time.timeScale = 1;
         imagenPrimeraPartida.SetActive(!primeraPartida);
+        ActivarInstaciarEnemigos();
     }
 
     void Update()
@@ -26,6 +28,7 @@ public class PerderYEmpezar : MonoBehaviour
         imagenPrimeraPartida.SetActive(false);
         Time.timeScale = 1;
         primeraPartida = true;
+        ActivarInstaciarEnemigos();
     }
 
     public void Perder()
@@ -37,6 +40,11 @@ public class PerderYEmpezar : MonoBehaviour
     public void Reiniciar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void ActivarInstaciarEnemigos()
+    {
+        insE.enabled = primeraPartida;
     }
 
 }
