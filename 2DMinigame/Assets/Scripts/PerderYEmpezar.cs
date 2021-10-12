@@ -17,6 +17,7 @@ public class PerderYEmpezar : MonoBehaviour
         hasPerdido = false;
         Time.timeScale = 1;
         imagenPrimeraPartida.SetActive(!primeraPartida);
+        imagenPerder.SetActive(false);
         ActivarInstaciarEnemigos();
     }
 
